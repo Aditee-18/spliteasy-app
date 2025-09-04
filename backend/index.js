@@ -9,10 +9,13 @@ const app = express();
 const PORT = process.env.PORT ||8080;
 // Middleware
 app.use(cors({
-  origin: '*', // Allow all origins (or replace with specific origin for security)
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type']
+  origin: "https://spliteasy-app.vercel.app/" // Your live frontend URL
 }));
+// app.use(cors({
+//   origin: '*', // Allow all origins (or replace with specific origin for security)
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type']
+// }));
 app.use(express.json()); // Allows the server to understand JSON from request bodies
 app.use(bodyParser.json());
 app.use('/api', mailRoute);
