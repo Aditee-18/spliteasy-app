@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT ||8080;
 // Middleware
 app.use(cors({
-  origin: "https://spliteasy-app.vercel.app/" // Your live frontend URL
+  origin: "https://spliteasy-app.vercel.app" // Your live frontend URL
 }));
 // app.use(cors({
 //   origin: '*', // Allow all origins (or replace with specific origin for security)
